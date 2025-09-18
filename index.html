@@ -2,17 +2,24 @@
 <html lang="uk">
 <head>
   <meta charset="UTF-8">
-  <title>Список завдань</title>
+  <title>To-Do зі стилями</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Мій To-Do список</h1>
+  <div class="app">
+    <h1 class="title">Мій To-Do список</h1>
 
-  <input type="text" placeholder="Нове завдання">
-  <button id="firstAdd">Додати</button>
+    <div class="form">
+      <input type="text" placeholder="Нове завдання">
+      <button class="addTask">Додати</button>
+    </div>
 
-  <div id="taskList"></div>
-
-  <script src="script.js"></script>
+    <div class="taskList">
+      <ul>
+        <li>Приклад завдання</li>
+      </ul>
+    </div>
+</div>
+<script src="script.js"></script>
 </body>
 </html>

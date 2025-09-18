@@ -1,0 +1,81 @@
+/* Центрування контенту */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center; /*централізація */
+    min-height: 100vh;
+    background-image: url("https://www.toptal.com/designers/subtlepatterns/uploads/spikes.png");
+    background-repeat: repeat;   /* повторювати безкінечно */
+    background-size: auto;
+  }
+  
+  /* Контейнер додатку */
+  .app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Стилізація форми вводу */
+  .form {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
+  }
+  
+  .form input {
+    padding: 10px 15px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: all 0.3s ease;
+    width: 220px;  /* базові стилі для поля */
+  }
+
+  .form input:focus {
+    border-color: #666;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  }
+  
+  .form button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #444; /* стриманий темний */
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    /* базові стилі для кнопки */
+  }
+
+  .form button:hover {
+    background-color: #666;
+    transform: translateY(-2px);
+  }
+  
+  /* Базові стилі для списку */
+  .taskList ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .taskList li {
+
+    display: none; /* приховуємо список */
+    /* оформлення елементів списку */
+  }
+
+  .title {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 2.2rem;
+    color: #333; /* темно-сірий замість яскравого */
+    letter-spacing: 2px;
+    text-align: center;
+    text-transform: none; /* без "усі великі" */
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1); /* легка тінь для об’єму */
+    margin-bottom: 20px;
+  }
+  
