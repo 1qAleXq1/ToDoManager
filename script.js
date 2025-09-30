@@ -1,6 +1,6 @@
 const newTask = document.querySelector("input");
 const btn = document.querySelector("button")
-const taskList = document.querySelector(".taskList ul");
+const taskList = document.querySelector(".taskList ol");
 const arrTask = [];
 
 btn.addEventListener('click', function addTask (){
@@ -16,9 +16,21 @@ btn.addEventListener('click', function addTask (){
 })
 function renderTasks () {
     taskList.innerHTML = "";
-    arrTask.forEach(item => {
+    arrTask.forEach((item, index) => {
      const li = document.createElement("li");
-     li.textContent = item;
-     taskList.appendChild(li);
+     const newBtn = document.createElement("button");
+
+     li.id = "task-" + index;
+     newBtn.id = "btn-" + index;
+
+     newBtn.textContent = "Видалити";
+     newBtn.addEventListener ('click',() => deleteTask(index));
+
+     li.append(item, newBtn);
+     taskList.append(li);
     })
+}
+function deleteTask (index) {
+    arrTask.splice(index, 1)
+    renderTasks();
 }
